@@ -22,7 +22,7 @@ public class App {
                 //calls methods with code for each function
                 switch (homeInput) {
                     case 1:
-                        // open sub menu
+                        addCreature();
                         break;
                     case 0:
                         System.out.println("The program exits");
@@ -33,7 +33,34 @@ public class App {
 
         }
         //menu methods
+        public static void addCreature(){
+            System.out.println("================");
+            System.out.println("1) Commission Creature");
+            System.out.println("2) Add Transport Package");
+            System.out.println("3) Add Maintenance Kit");
+            System.out.println("4) Checkout");
+            System.out.println("0) Cancel Order");
+            System.out.println("================");
+            int newOrderInput = input.nextInt();
 
+            switch (newOrderInput){
+                case 1:
+                    //Commission Creature
+                    break;
+                case 2:
+                    //Add Transport Package
+                    break;
+                case 3:
+                    //Add Maintenance Kit
+                    break;
+                case 4:
+                    //Checkout
+                    break;
+                case 0:
+                    //Cancel Order
+                    break;
+            }
+        }
 
 }
 
