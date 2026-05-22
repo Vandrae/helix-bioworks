@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.creature;
 
 public class Genome {
     private String Primate;
@@ -11,7 +11,6 @@ public class Genome {
     //methods
 
     //Constructor
-
     public Genome(String apexPred, String aquatic, String avian, String reptilian, String insectoid, String primate) {
         this.apexPred = apexPred;
         Aquatic = aquatic;
@@ -22,7 +21,6 @@ public class Genome {
     }
 
     //Getter/Setter
-
     public String getPrimate() {
         return Primate;
     }
