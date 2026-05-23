@@ -1,9 +1,10 @@
 package com.pluralsight.creature;
 
-public class OffensiveAdaptation {
+import com.pluralsight.Credits;
 
-    private String name;
+public class OffensiveAdaptation extends Adaptation {
 
-
-
+    public OffensiveAdaptation(String name, Credits basePrice, boolean isExtra) {
+        super(name, basePrice, isExtra);
+    }
 }
