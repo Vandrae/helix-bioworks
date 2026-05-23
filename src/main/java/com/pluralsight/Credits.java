@@ -18,4 +18,10 @@ public class Credits {
     public Credits(double amount) {
         this.amount = amount;
     }
+
+    //getter/setter
+
+    public double getAmount() {
+        return amount;
+    }
 }
