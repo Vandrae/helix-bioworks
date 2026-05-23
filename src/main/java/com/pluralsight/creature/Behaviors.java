@@ -1,18 +1,17 @@
 package com.pluralsight.creature;
 
-public class StandardMod {
-
+public class Behaviors {
     private String name;
 
     //methods
 
     @Override
     public String toString() {
-        return "Standard Modifications: " + name ;
+        return "Behavioral conditioning: " + name ;
     }
 
     //constructor
-    public StandardMod(String name) {
+    public Behaviors(String name) {
         this.name = name;
     }
 
