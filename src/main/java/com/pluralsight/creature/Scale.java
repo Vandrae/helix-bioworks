@@ -5,7 +5,8 @@ import com.pluralsight.Credits;
 public enum Scale {
     CLASS_I,
     CLASS_II,
-    CLASS_III;
+    CLASS_III,
+    CLASS_IV;
 
     public Credits getBasePrice(){
        switch (this){
@@ -17,6 +18,9 @@ public enum Scale {
            }
            case CLASS_III -> {
                return new Credits(100000.00);
+           }
+           case CLASS_IV -> {
+               return new Credits(150000.00);
            }
            default -> throw new IllegalStateException("Unknown Scale Class");
        }
