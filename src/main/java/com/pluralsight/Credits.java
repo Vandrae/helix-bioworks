@@ -2,16 +2,20 @@ package com.pluralsight;
 
 public class Credits {
 
-    private double Amount;
-    //money stuff
-    //ability to charge or take payments
-
-
+    private double amount;
 
     //methods
+    public Credits add (Credits cost){
+        return new Credits(this.amount + cost.amount);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("⏣%.2f", amount) + " " + "CR";
+    }
 
     //constructor
-
-    //getter/setter
-
+    public Credits(double amount) {
+        this.amount = amount;
+    }
 }
