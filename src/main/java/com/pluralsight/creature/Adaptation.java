@@ -26,6 +26,12 @@ public class Adaptation {
 
         }
     }
+
+    @Override
+    public String toString() {
+        return "Premium Charge - " + name + " | " + basePrice ;
+    }
+
     //constructor
     public Adaptation(String name, Credits basePrice, boolean isExtra) {
         this.name = name;
