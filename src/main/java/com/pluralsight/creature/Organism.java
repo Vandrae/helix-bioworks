@@ -14,7 +14,26 @@ public class Organism {
     boolean acceleratedGrowth;
 
     //methods
+    public Credits getPrice(){
+        //base price+class+defensive+offensive = total
+        Credits total = scale.getBasePrice();
+        int Adaptations = 0;
+        //loop thrugh each item on the list then get the price of each weapon and add it to
+        // the price of the creature's size
+        for (OffensiveAdaptation weapon: weapons){
+            total = total.add(weapon.getPrice(scale));
+        }
 
+        for (DefensiveAdaptation defense: defenses){
+            total = total.add(defense.getPrice(scale));
+        }
+
+        if (acceleratedGrowth == true){
+            //converting the product of amount a nd 1.15 back to a credit so it can be used
+            total = new Credits(total.getAmount() * 1.15);
+        }
+        return total;
+    }
 
     //constructor should have empty lists on it because we will populate them later
     public Organism(Genome genome, Scale scale, boolean acceleratedGrowth) {
