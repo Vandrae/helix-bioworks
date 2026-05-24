@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import com.pluralsight.creature.*;
+
 import java.util.Scanner;
 
 public class App {

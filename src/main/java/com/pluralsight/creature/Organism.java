@@ -47,6 +47,22 @@ public class Organism {
         return total;
     }
 
+    //to string for receipt
+    @Override
+    public String toString() {
+        return "===========================" + "\n" +
+                "HELIX BIOWORKS " + "\n" +
+                "===========================" + "\n" +
+                "Genome: " + genome + " | Scale: " + scale + "\n" +
+                "Weapons: " + weapons + "\n" +
+                "Defenses: " + defenses + "\n" +
+                "Mods: " + mods + "\n" +
+                "Behavioral conditioning: " + behaviors +"\n"+
+                //changes True/False to Yes/No
+                "Accelerated Growth: " + (acceleratedGrowth ? "Yes" : "No") +"\n"+
+                "Total Price: " + getPrice();
+    }
+
 
 
     //constructor should have empty lists on it because we will populate them later
