@@ -1,0 +1,31 @@
+package com.pluralsight.order;
+
+import com.pluralsight.Credits;
+
+public enum Size {
+    SMALL,
+    MEDIUM,
+    LARGE,
+    EXTRA_LARGE;
+
+    public Credits getPrice(){
+        switch (this){
+            case SMALL -> {
+                return new Credits(500);
+            }
+            case MEDIUM -> {
+                return new Credits(2000);
+            }
+            case LARGE -> {
+                return new Credits(10000);
+            }
+            case EXTRA_LARGE -> {
+                return new Credits(50000);
+            }default -> throw new IllegalStateException("Unknown Size");
+        }
+    }
+
+
+
+}
+
