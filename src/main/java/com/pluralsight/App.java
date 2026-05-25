@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class App {
     public static Scanner input = new Scanner(System.in);
     public static Order order = new Order();
-    public static Organism currentOrganism;
+    public static Organism organismChoice;
     public static Genome genomeChoice;
     public static Scale scaleChoice;
     public static void main(String[] args) {
@@ -94,6 +94,7 @@ public class App {
                 break;
             case 2:
                 //Scale
+                sizeMenu();
                 break;
             case 3:
                 //OO
@@ -176,6 +177,44 @@ public class App {
                 break;
             case 0:
                 break;
+
+        }if (sizeInput >= 1){
+            organismChoice = new Organism(genomeChoice, scaleChoice, false);
+        }
+
+    }
+    public static void offensiveMenu(){
+        System.out.println("================");
+        System.out.println("1) Venom Glands");
+        System.out.println("2) Razor bone spurs");
+        System.out.println("3) Bio-electric organs");
+        System.out.println("4) Acid secretion sacs");
+        System.out.println("5) Crushing Appendages");
+        System.out.println("0) Back");
+        System.out.println("================");
+        int offensiveInput = input.nextInt();
+
+
+        switch (offensiveInput){
+            case 1:
+                organismChoice.addWeapons(new OffensiveAdaptation("Venom Glands", new Credits(500),false));
+                break;
+            case 2:
+                organismChoice.addWeapons(new OffensiveAdaptation("Razor bone spurs", new Credits(500),false));
+                break;
+            case 3:
+                organismChoice.addWeapons(new OffensiveAdaptation("Bio-electric organs", new Credits(500),false));
+                break;
+            case 4:
+                organismChoice.addWeapons(new OffensiveAdaptation("Acid secretion sacs", new Credits(500),false));
+                break;
+            case 5:
+                organismChoice.addWeapons(new OffensiveAdaptation("Crushing Appendages", new Credits(500),false));
+                break;
+            case 0:
+
+                break;
+
         }
     }
 }
