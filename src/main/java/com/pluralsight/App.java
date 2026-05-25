@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 public class App {
     public static Scanner input = new Scanner(System.in);
+    public static Order order = new Order();
+    public static Organism currentOrganism;
+    public static Genome genomeChoice;
     public static void main(String[] args) {
         homeMenu();
 
@@ -49,7 +52,7 @@ public class App {
         switch (newOrderInput){
             case 1:
                 //Commission Creature
-
+                commissionCreature();
                 break;
             case 2:
                 //Add Transport Package
@@ -85,6 +88,7 @@ public class App {
         switch (commissionInput){
             case 1:
                 //Genome
+                genomeMenu();
                 break;
             case 2:
                 //Scale
@@ -124,16 +128,22 @@ public class App {
 
         switch (genomeInput){
             case 1:
+                genomeChoice = Genome.PRIMATE;
                 break;
             case 2:
+                genomeChoice = Genome.INSECTOID;
                 break;
             case 3:
+                genomeChoice = Genome.REPTILIAN;
                 break;
             case 4:
+                genomeChoice = Genome.AVIAN;
                 break;
             case 5:
+                genomeChoice = Genome.AQUATIC;
                 break;
             case 6:
+                genomeChoice = Genome.APEX;
                 break;
             case 0:
                 break;
