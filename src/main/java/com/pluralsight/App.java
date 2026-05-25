@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import com.pluralsight.creature.*;
+import com.pluralsight.order.Order;
 
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ public class App {
     public static Order order = new Order();
     public static Organism currentOrganism;
     public static Genome genomeChoice;
+    public static Scale scaleChoice;
     public static void main(String[] args) {
         homeMenu();
 
@@ -144,6 +146,33 @@ public class App {
                 break;
             case 6:
                 genomeChoice = Genome.APEX;
+                break;
+            case 0:
+                break;
+        }
+    }
+    public static void sizeMenu(){
+        System.out.println("================");
+        System.out.println("1) Class I");
+        System.out.println("2) Class II");
+        System.out.println("3) Class III");
+        System.out.println("4) Class IV");
+        System.out.println("0) Cancel Order");
+        System.out.println("================");
+        int sizeInput = input.nextInt();
+
+        switch (sizeInput){
+            case 1:
+                scaleChoice = Scale.CLASS_I;
+                break;
+            case 2:
+                scaleChoice = Scale.CLASS_II;
+                break;
+            case 3:
+                scaleChoice = Scale.CLASS_III;
+                break;
+            case 4:
+                scaleChoice = Scale.CLASS_IV;
                 break;
             case 0:
                 break;
