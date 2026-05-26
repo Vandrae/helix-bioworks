@@ -2,6 +2,8 @@ package com.pluralsight;
 
 import com.pluralsight.creature.*;
 import com.pluralsight.order.Order;
+import com.pluralsight.order.Size;
+import com.pluralsight.order.TransportPackage;
 
 import java.util.Scanner;
 
@@ -370,7 +372,31 @@ public class App {
     }
 
     public static void transportPackage(){
+        System.out.println("================");
+        System.out.println("1) Class I");
+        System.out.println("2) Class II");
+        System.out.println("3) Class III");
+        System.out.println("4) Class IV");
+        System.out.println("0) Back");
+        System.out.println("================");
+        int transportInput = input.nextInt();
 
+        switch (transportInput){
+            case 1:
+                order.setTransportPackage(new TransportPackage(Size.SMALL));
+                break;
+            case 2:
+                order.setTransportPackage(new TransportPackage(Size.MEDIUM));
+                break;
+            case 3:
+                order.setTransportPackage(new TransportPackage(Size.LARGE));
+                break;
+            case 4:
+                order.setTransportPackage(new TransportPackage(Size.EXTRA_LARGE));
+                break;
+            case 0:
+                break;
+        }
     }
 
     public static void maintenanceKit(){
