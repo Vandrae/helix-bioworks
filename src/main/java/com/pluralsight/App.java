@@ -265,6 +265,7 @@ public class App {
     }
 
     public static void standardMenu() {
+        System.out.println("Choose any number of Options");
         System.out.println("================");
         System.out.println("1) Enhanced Smell");
         System.out.println("2) Infrared Vision");
@@ -306,7 +307,38 @@ public class App {
 
     }
 
+    public static void behaviorMenu() {
+        System.out.println("Choose any number of Options");
+        System.out.println("================");
+        System.out.println("1) Imprinting Bonding");
+        System.out.println("2) Aggression Targeting");
+        System.out.println("3) Territorial");
+        System.out.println("4) Feral");
+        System.out.println("5) Memory Erasure");
+        System.out.println("0) Back");
+        System.out.println("================");
+        int behaviorInput = input.nextInt();
 
+        switch (behaviorInput){
+            case 1:
+                organismChoice.addBehaviors(new Behaviors("Infrared Vision"));
+                break;
+            case 2:
+                organismChoice.addBehaviors(new Behaviors("Aggression Targeting"));
+                break;
+            case 3:
+                organismChoice.addBehaviors(new Behaviors("Territorial"));
+                break;
+            case 4:
+                organismChoice.addBehaviors(new Behaviors("Feral"));
+                break;
+            case 5:
+                organismChoice.addBehaviors(new Behaviors("Memory Erasure"));
+                break;
+            case 0:
+                break;
+        }
+    }
     }
 
 
