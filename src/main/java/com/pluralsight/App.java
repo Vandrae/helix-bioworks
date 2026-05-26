@@ -58,15 +58,15 @@ public class App {
                 break;
             case 2:
                 //Add Transport Package
-
+                transportPackage();
                 break;
             case 3:
                 //Add Maintenance Kit
-
+                maintenanceKit();
                 break;
             case 4:
                 //Checkout
-
+                Checkout();
                 break;
             case 0:
                 //Cancel Order
@@ -128,6 +128,7 @@ public class App {
         }
 
     }
+
     public static void genomeMenu(){
         System.out.println("================");
         System.out.println("1) Primate");
@@ -366,6 +367,18 @@ public class App {
             case 0:
                 break;
         }
+    }
+
+    public static void transportPackage(){
+
+    }
+
+    public static void maintenanceKit(){
+
+    }
+
+    public static void Checkout(){
+
     }
 
     }
