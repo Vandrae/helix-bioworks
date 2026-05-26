@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import com.pluralsight.creature.*;
+import com.pluralsight.order.Maintenance;
 import com.pluralsight.order.Order;
 import com.pluralsight.order.Size;
 import com.pluralsight.order.TransportPackage;
@@ -400,7 +401,22 @@ public class App {
     }
 
     public static void maintenanceKit(){
-
+        System.out.println("Do you want to add a Maintenance Kit?");
+        System.out.println(" ");
+        System.out.println("1) Yes");
+        System.out.println("2) No");
+        System.out.println("0) Back");
+        System.out.println("================");
+        int maintenanceInput = input.nextInt();
+        switch (maintenanceInput){
+            case 1:
+                order.setMaintenance(new Maintenance());
+                break;
+            case 2:
+                break;
+            case 0:
+                break;
+        }
     }
 
     public static void Checkout(){
