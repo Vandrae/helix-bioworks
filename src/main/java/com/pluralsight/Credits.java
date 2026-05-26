@@ -11,7 +11,7 @@ public class Credits {
 
     @Override
     public String toString() {
-        return String.format("⏣%.2f", amount) + " " + "CR";
+        return String.format("⏣%,.2f", amount) + " " + "CR";
     }
 
     //constructor

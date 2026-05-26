@@ -14,13 +14,13 @@ public enum Scale {
                return new Credits(800.00);
            }
            case CLASS_II -> {
-               return new Credits(12000.00);
+               return new Credits(1200.00);
            }
            case CLASS_III -> {
-               return new Credits(100000.00);
+               return new Credits(10000.00);
            }
            case CLASS_IV -> {
-               return new Credits(150000.00);
+               return new Credits(15000.00);
            }
            default -> throw new IllegalStateException("Unknown Scale Class");
        }

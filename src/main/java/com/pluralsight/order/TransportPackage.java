@@ -14,4 +14,9 @@ public class TransportPackage {
     public TransportPackage(Size size) {
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return " " + size + " " + getPrice();
+    }
 }

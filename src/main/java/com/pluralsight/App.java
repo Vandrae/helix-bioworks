@@ -44,37 +44,39 @@ public class App {
 
         }
     //menu methods
+
     public static void addCreature(){
-        System.out.println("================");
-        System.out.println("1) Commission Creature");
-        System.out.println("2) Add Transport Package");
-        System.out.println("3) Add Maintenance Kit");
-        System.out.println("4) Checkout");
-        System.out.println("0) Cancel Order");
-        System.out.println("================");
-        int newOrderInput = input.nextInt();
+        while (true) {
+            System.out.println("================");
+            System.out.println("1) Commission Creature");
+            System.out.println("2) Add Transport Package");
+            System.out.println("3) Add Maintenance Kit");
+            System.out.println("4) Checkout");
+            System.out.println("0) Cancel Order");
+            System.out.println("================");
+            int newOrderInput = input.nextInt();
 
-        switch (newOrderInput){
-            case 1:
-                //Commission Creature
-                commissionCreature();
-                break;
-            case 2:
-                //Add Transport Package
-                transportPackage();
-                break;
-            case 3:
-                //Add Maintenance Kit
-                maintenanceKit();
-                break;
-            case 4:
-                //Checkout
-                Checkout();
-                break;
-            case 0:
-                //Cancel Order
-
-                break;
+            switch (newOrderInput) {
+                case 1:
+                    //Commission Creature
+                    commissionCreature();
+                    break;
+                case 2:
+                    //Add Transport Package
+                    transportPackage();
+                    break;
+                case 3:
+                    //Add Maintenance Kit
+                    maintenanceKit();
+                    break;
+                case 4:
+                    //Checkout
+                    Checkout();
+                    return;
+                case 0:
+                    //Cancel Order
+                    return;
+            }
         }
     }
 
@@ -89,7 +91,7 @@ public class App {
             System.out.println("6) Conditioning");
             System.out.println("7) Growth Vat (Accelerated Growth)");
             System.out.println("8) Add to Cart");
-            System.out.println("0) Cancel Order");
+            System.out.println("0) Back");
             System.out.println("================");
             int commissionInput = input.nextInt();
 
@@ -124,9 +126,9 @@ public class App {
                     break;
                 case 8:
                     order.addOrganism(organismChoice);
-                    break;
+                    return;
                 case 0:
-                    break;
+                    return;
             }
         }
 
@@ -140,7 +142,7 @@ public class App {
         System.out.println("4) Avian");
         System.out.println("5) Aquatic");
         System.out.println("6) Apex");
-        System.out.println("0) Cancel Order");
+        System.out.println("0) Back");
         System.out.println("================");
         int genomeInput = input.nextInt();
 
@@ -201,154 +203,161 @@ public class App {
     }
 
     public static void offensiveMenu(){
-        System.out.println("================");
-        System.out.println("1) Venom Glands");
-        System.out.println("2) Razor bone spurs");
-        System.out.println("3) Bio-electric organs");
-        System.out.println("4) Acid secretion sacs");
-        System.out.println("5) Crushing Appendages");
-        System.out.println("6) Active Camouflage");
-        System.out.println("0) Back");
-        System.out.println("================");
-        int offensiveInput = input.nextInt();
+        while (true) {
+            System.out.println("================");
+            System.out.println("1) Venom Glands");
+            System.out.println("2) Razor bone spurs");
+            System.out.println("3) Bio-electric organs");
+            System.out.println("4) Acid secretion sacs");
+            System.out.println("5) Crushing Appendages");
+            System.out.println("6) Active Camouflage");
+            System.out.println("0) Back");
+            System.out.println("================");
+            int offensiveInput = input.nextInt();
 
 
-        switch (offensiveInput){
-            case 1:
-                organismChoice.addWeapons(new OffensiveAdaptation("Venom Glands", new Credits(500),false));
-                break;
-            case 2:
-                organismChoice.addWeapons(new OffensiveAdaptation("Razor bone spurs", new Credits(500),false));
-                break;
-            case 3:
-                organismChoice.addWeapons(new OffensiveAdaptation("Bio-electric organs", new Credits(500),false));
-                break;
-            case 4:
-                organismChoice.addWeapons(new OffensiveAdaptation("Acid secretion sacs", new Credits(500),false));
-                break;
-            case 5:
-                organismChoice.addWeapons(new OffensiveAdaptation("Crushing Appendages", new Credits(500),false));
-                break;
-            case 6:
-                organismChoice.addWeapons(new OffensiveAdaptation("Active Camouflage", new Credits(500),false));
-                break;
-            case 0:
-                break;
+            switch (offensiveInput) {
+                case 1:
+                    organismChoice.addWeapons(new OffensiveAdaptation("Venom Glands", new Credits(500), false));
+                    break;
+                case 2:
+                    organismChoice.addWeapons(new OffensiveAdaptation("Razor bone spurs", new Credits(500), false));
+                    break;
+                case 3:
+                    organismChoice.addWeapons(new OffensiveAdaptation("Bio-electric organs", new Credits(500), false));
+                    break;
+                case 4:
+                    organismChoice.addWeapons(new OffensiveAdaptation("Acid secretion sacs", new Credits(500), false));
+                    break;
+                case 5:
+                    organismChoice.addWeapons(new OffensiveAdaptation("Crushing Appendages", new Credits(500), false));
+                    break;
+                case 6:
+                    organismChoice.addWeapons(new OffensiveAdaptation("Active Camouflage", new Credits(500), false));
+                    break;
+                case 0:
+                    return;
 
+            }
         }
     }
 
     public static void defensiveMenu(){
-        System.out.println("================");
-        System.out.println("1) Subdermal Armor");
-        System.out.println("2) Rapid Clotting Tissue");
-        System.out.println("3) Toxin Immunity");
-        System.out.println("4) Chromatophore Camo");
-        System.out.println("5) Severe Heat Hide");
-        System.out.println("6) Severe Cold Hide");
-        System.out.println("0) Back");
-        System.out.println("================");
-        int defensiveInput = input.nextInt();
+        while (true) {
+            System.out.println("================");
+            System.out.println("1) Subdermal Armor");
+            System.out.println("2) Rapid Clotting Tissue");
+            System.out.println("3) Toxin Immunity");
+            System.out.println("4) Chromatophore Camo");
+            System.out.println("5) Severe Heat Hide");
+            System.out.println("6) Severe Cold Hide");
+            System.out.println("0) Back");
+            System.out.println("================");
+            int defensiveInput = input.nextInt();
 
 
-        switch (defensiveInput){
-            case 1:
-                organismChoice.addDefenses(new DefensiveAdaptation("Subdermal Armor", new Credits(500),false));
-                break;
-            case 2:
-                organismChoice.addDefenses(new DefensiveAdaptation("Rapid Clotting Tissue", new Credits(500),false));
-                break;
-            case 3:
-                organismChoice.addDefenses(new DefensiveAdaptation("Toxin Immunity", new Credits(500),false));
-                break;
-            case 4:
-                organismChoice.addDefenses(new DefensiveAdaptation("Chromatophore Camo", new Credits(500),false));
-                break;
-            case 5:
-                organismChoice.addDefenses(new DefensiveAdaptation("Severe Heat Hide", new Credits(500),false));
-                break;
-            case 6:
-                organismChoice.addDefenses(new DefensiveAdaptation("Severe Cold Hide", new Credits(500),false));
-                break;
-            case  0:
-                break;
+            switch (defensiveInput) {
+                case 1:
+                    organismChoice.addDefenses(new DefensiveAdaptation("Subdermal Armor", new Credits(500), false));
+                    break;
+                case 2:
+                    organismChoice.addDefenses(new DefensiveAdaptation("Rapid Clotting Tissue", new Credits(500), false));
+                    break;
+                case 3:
+                    organismChoice.addDefenses(new DefensiveAdaptation("Toxin Immunity", new Credits(500), false));
+                    break;
+                case 4:
+                    organismChoice.addDefenses(new DefensiveAdaptation("Chromatophore Camo", new Credits(500), false));
+                    break;
+                case 5:
+                    organismChoice.addDefenses(new DefensiveAdaptation("Severe Heat Hide", new Credits(500), false));
+                    break;
+                case 6:
+                    organismChoice.addDefenses(new DefensiveAdaptation("Severe Cold Hide", new Credits(500), false));
+                    break;
+                case 0:
+                    return;
 
+            }
         }
     }
 
     public static void standardMenu() {
-        System.out.println("Choose any number of Options");
-        System.out.println("================");
-        System.out.println("1) Enhanced Smell");
-        System.out.println("2) Infrared Vision");
-        System.out.println("3) Increased Stamina");
-        System.out.println("4) Aggression tuning");
-        System.out.println("5) Pack Tactics");
-        System.out.println("6) Vocal Suppression");
-        System.out.println("7) Neural Compliance");
-        System.out.println("0) Back");
-        System.out.println("================");
-        int standardInput = input.nextInt();
+        while (true) {
+            System.out.println("Choose any number of Options");
+            System.out.println("================");
+            System.out.println("1) Enhanced Smell");
+            System.out.println("2) Infrared Vision");
+            System.out.println("3) Increased Stamina");
+            System.out.println("4) Aggression tuning");
+            System.out.println("5) Pack Tactics");
+            System.out.println("6) Vocal Suppression");
+            System.out.println("7) Neural Compliance");
+            System.out.println("0) Back");
+            System.out.println("================");
+            int standardInput = input.nextInt();
 
-        switch (standardInput) {
-            case 1:
-                organismChoice.addMods(new StandardMod("Enhanced Smell"));
-                break;
-            case 2:
-                organismChoice.addMods(new StandardMod("Infrared Vision"));
-                break;
-            case 3:
-                organismChoice.addMods(new StandardMod("Increased Stamina"));
-                break;
-            case 4:
-                organismChoice.addMods(new StandardMod("Aggression tuning"));
-                break;
-            case 5:
-                organismChoice.addMods(new StandardMod("Pack Tactics"));
-                break;
-            case 6:
-                organismChoice.addMods(new StandardMod("Vocal Suppression"));
-                break;
-            case 7:
-                organismChoice.addMods(new StandardMod("Neural Compliance"));
-                break;
-            case 0:
-                break;
+            switch (standardInput) {
+                case 1:
+                    organismChoice.addMods(new StandardMod("Enhanced Smell"));
+                    break;
+                case 2:
+                    organismChoice.addMods(new StandardMod("Infrared Vision"));
+                    break;
+                case 3:
+                    organismChoice.addMods(new StandardMod("Increased Stamina"));
+                    break;
+                case 4:
+                    organismChoice.addMods(new StandardMod("Aggression tuning"));
+                    break;
+                case 5:
+                    organismChoice.addMods(new StandardMod("Pack Tactics"));
+                    break;
+                case 6:
+                    organismChoice.addMods(new StandardMod("Vocal Suppression"));
+                    break;
+                case 7:
+                    organismChoice.addMods(new StandardMod("Neural Compliance"));
+                    break;
+                case 0:
+                    return;
 
+            }
         }
-
     }
 
     public static void behaviorMenu() {
-        System.out.println("Choose any number of Options");
-        System.out.println("================");
-        System.out.println("1) Imprinting Bonding");
-        System.out.println("2) Aggression Targeting");
-        System.out.println("3) Territorial");
-        System.out.println("4) Feral");
-        System.out.println("5) Memory Erasure");
-        System.out.println("0) Back");
-        System.out.println("================");
-        int behaviorInput = input.nextInt();
+        while (true) {
+            System.out.println("Choose any number of Options");
+            System.out.println("================");
+            System.out.println("1) Imprinting Bonding");
+            System.out.println("2) Aggression Targeting");
+            System.out.println("3) Territorial");
+            System.out.println("4) Feral");
+            System.out.println("5) Memory Erasure");
+            System.out.println("0) Back");
+            System.out.println("================");
+            int behaviorInput = input.nextInt();
 
-        switch (behaviorInput){
-            case 1:
-                organismChoice.addBehaviors(new Behaviors("Imprinting Bonding"));
-                break;
-            case 2:
-                organismChoice.addBehaviors(new Behaviors("Aggression Targeting"));
-                break;
-            case 3:
-                organismChoice.addBehaviors(new Behaviors("Territorial"));
-                break;
-            case 4:
-                organismChoice.addBehaviors(new Behaviors("Feral"));
-                break;
-            case 5:
-                organismChoice.addBehaviors(new Behaviors("Memory Erasure"));
-                break;
-            case 0:
-                break;
+            switch (behaviorInput) {
+                case 1:
+                    organismChoice.addBehaviors(new Behaviors("Imprinting Bonding"));
+                    break;
+                case 2:
+                    organismChoice.addBehaviors(new Behaviors("Aggression Targeting"));
+                    break;
+                case 3:
+                    organismChoice.addBehaviors(new Behaviors("Territorial"));
+                    break;
+                case 4:
+                    organismChoice.addBehaviors(new Behaviors("Feral"));
+                    break;
+                case 5:
+                    organismChoice.addBehaviors(new Behaviors("Memory Erasure"));
+                    break;
+                case 0:
+                    return;
+            }
         }
     }
 
@@ -420,6 +429,7 @@ public class App {
     }
 
     public static void Checkout(){
+        System.out.println(order.getOrderSummary());
 
     }
 

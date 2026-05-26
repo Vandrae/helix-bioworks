@@ -8,4 +8,9 @@ public class Maintenance {
          return new Credits(150.00);
 
     }
+
+    @Override
+    public String toString() {
+        return "Standard Maintenance " + " " + getPrice();
+    }
 }
