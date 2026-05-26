@@ -74,6 +74,7 @@ public class App {
                 break;
         }
     }
+
     public static void commissionCreature(){
         System.out.println("================");
         System.out.println("1) Genome");
@@ -98,9 +99,11 @@ public class App {
                 break;
             case 3:
                 //OO
+                offensiveMenu();
                 break;
             case 4:
                 //DO
+                defensiveMenu();
                 break;
             case 5:
                 //SA
@@ -152,6 +155,7 @@ public class App {
                 break;
         }
     }
+
     public static void sizeMenu(){
         System.out.println("================");
         System.out.println("1) Class I");
@@ -183,6 +187,7 @@ public class App {
         }
 
     }
+
     public static void offensiveMenu(){
         System.out.println("================");
         System.out.println("1) Venom Glands");
@@ -220,6 +225,7 @@ public class App {
 
         }
     }
+
     public static void defensiveMenu(){
         System.out.println("================");
         System.out.println("1) Subdermal Armor");
@@ -235,7 +241,7 @@ public class App {
 
         switch (offensiveInput){
             case 1:
-                organismChoice.addDefenses(new DefensiveAdaptation("Subdermal Armor", new Credits(500),false));
+                organismChoice.addMods(new StandardMod("Subdermal Armor"));
                 break;
             case 2:
                 organismChoice.addDefenses(new DefensiveAdaptation("Rapid Clotting Tissue", new Credits(500),false));
@@ -257,7 +263,52 @@ public class App {
 
         }
     }
-}
+
+    public static void standardMenu() {
+        System.out.println("================");
+        System.out.println("1) Enhanced Smell");
+        System.out.println("2) Infrared Vision");
+        System.out.println("3) Increased Stamina");
+        System.out.println("4) Aggression tuning");
+        System.out.println("5) Pack Tactics");
+        System.out.println("6) Vocal Suppression");
+        System.out.println("7) Neural Compliance");
+        System.out.println("0) Back");
+        System.out.println("================");
+        int standardInput = input.nextInt();
+
+        switch (standardInput) {
+            case 1:
+                organismChoice.addMods(new StandardMod("Enhanced Smell"));
+                break;
+            case 2:
+                organismChoice.addMods(new StandardMod("Infrared Vision"));
+                break;
+            case 3:
+                organismChoice.addMods(new StandardMod("Increased Stamina"));
+                break;
+            case 4:
+                organismChoice.addMods(new StandardMod("Aggression tuning"));
+                break;
+            case 5:
+                organismChoice.addMods(new StandardMod("Pack Tactics"));
+                break;
+            case 6:
+                organismChoice.addMods(new StandardMod("Vocal Suppression"));
+                break;
+            case 7:
+                organismChoice.addMods(new StandardMod("Neural Compliance"));
+                break;
+            case 0:
+                break;
+
+        }
+
+    }
+
+
+    }
+
 
 
 
