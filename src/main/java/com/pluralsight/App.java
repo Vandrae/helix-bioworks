@@ -190,6 +190,7 @@ public class App {
         System.out.println("3) Bio-electric organs");
         System.out.println("4) Acid secretion sacs");
         System.out.println("5) Crushing Appendages");
+        System.out.println("6) Active Camouflage");
         System.out.println("0) Back");
         System.out.println("================");
         int offensiveInput = input.nextInt();
@@ -211,8 +212,47 @@ public class App {
             case 5:
                 organismChoice.addWeapons(new OffensiveAdaptation("Crushing Appendages", new Credits(500),false));
                 break;
+            case 6:
+                organismChoice.addWeapons(new OffensiveAdaptation("Active Camouflage", new Credits(500),false));
+                break;
             case 0:
+                break;
 
+        }
+    }
+    public static void defensiveMenu(){
+        System.out.println("================");
+        System.out.println("1) Subdermal Armor");
+        System.out.println("2) Rapid Clotting Tissue");
+        System.out.println("3) Toxin Immunity");
+        System.out.println("4) Chromatophore Camo");
+        System.out.println("5) Severe Heat Hide");
+        System.out.println("6) Severe Cold Hide");
+        System.out.println("0) Back");
+        System.out.println("================");
+        int offensiveInput = input.nextInt();
+
+
+        switch (offensiveInput){
+            case 1:
+                organismChoice.addDefenses(new DefensiveAdaptation("Subdermal Armor", new Credits(500),false));
+                break;
+            case 2:
+                organismChoice.addDefenses(new DefensiveAdaptation("Rapid Clotting Tissue", new Credits(500),false));
+                break;
+            case 3:
+                organismChoice.addDefenses(new DefensiveAdaptation("Toxin Immunity", new Credits(500),false));
+                break;
+            case 4:
+                organismChoice.addDefenses(new DefensiveAdaptation("Chromatophore Camo", new Credits(500),false));
+                break;
+            case 5:
+                organismChoice.addDefenses(new DefensiveAdaptation("Severe Heat Hide", new Credits(500),false));
+                break;
+            case 6:
+                organismChoice.addDefenses(new DefensiveAdaptation("Severe Cold Hide", new Credits(500),false));
+                break;
+            case  0:
                 break;
 
         }
