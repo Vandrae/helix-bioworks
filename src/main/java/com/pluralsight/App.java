@@ -76,51 +76,56 @@ public class App {
     }
 
     public static void commissionCreature(){
-        System.out.println("================");
-        System.out.println("1) Genome");
-        System.out.println("2) Size");
-        System.out.println("3) Offensive Adaptations");
-        System.out.println("4) Defensive Adaptations");
-        System.out.println("5) Standard Attributes");
-        System.out.println("6) Conditioning");
-        System.out.println("7) Growth Vat (Accelerated Growth)");
-        System.out.println("0) Cancel Order");
-        System.out.println("================");
-        int commissionInput = input.nextInt();
+        while (true) {
+            System.out.println("================");
+            System.out.println("1) Genome");
+            System.out.println("2) Size");
+            System.out.println("3) Offensive Adaptations");
+            System.out.println("4) Defensive Adaptations");
+            System.out.println("5) Standard Attributes");
+            System.out.println("6) Conditioning");
+            System.out.println("7) Growth Vat (Accelerated Growth)");
+            System.out.println("8) Add to Cart");
+            System.out.println("0) Cancel Order");
+            System.out.println("================");
+            int commissionInput = input.nextInt();
 
-        switch (commissionInput){
-            case 1:
-                //Genome
-                genomeMenu();
-                break;
-            case 2:
-                //Scale
-                sizeMenu();
-                break;
-            case 3:
-                //OO
-                offensiveMenu();
-                break;
-            case 4:
-                //DO
-                defensiveMenu();
-                break;
-            case 5:
-                //SA
-                standardMenu();
-                break;
-            case 6:
-                //Conditioning
-                behaviorMenu();
-                break;
-            case 7:
-                //GV
-                acceleratedGrowth();
-                break;
-            case 0:
-                break;
+            switch (commissionInput) {
+                case 1:
+                    //Genome
+                    genomeMenu();
+                    break;
+                case 2:
+                    //Scale
+                    sizeMenu();
+                    break;
+                case 3:
+                    //OO
+                    offensiveMenu();
+                    break;
+                case 4:
+                    //DO
+                    defensiveMenu();
+                    break;
+                case 5:
+                    //SA
+                    standardMenu();
+                    break;
+                case 6:
+                    //Conditioning
+                    behaviorMenu();
+                    break;
+                case 7:
+                    //GV
+                    acceleratedGrowth();
+                    break;
+                case 8:
+                    order.addOrganism(organismChoice);
+                    break;
+                case 0:
+                    break;
+            }
         }
-
 
     }
     public static void genomeMenu(){
