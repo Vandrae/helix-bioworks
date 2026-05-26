@@ -107,12 +107,15 @@ public class App {
                 break;
             case 5:
                 //SA
+                standardMenu();
                 break;
             case 6:
                 //Conditioning
+                behaviorMenu();
                 break;
             case 7:
                 //GV
+                acceleratedGrowth();
                 break;
             case 0:
                 break;
@@ -236,12 +239,12 @@ public class App {
         System.out.println("6) Severe Cold Hide");
         System.out.println("0) Back");
         System.out.println("================");
-        int offensiveInput = input.nextInt();
+        int defensiveInput = input.nextInt();
 
 
-        switch (offensiveInput){
+        switch (defensiveInput){
             case 1:
-                organismChoice.addMods(new StandardMod("Subdermal Armor"));
+                organismChoice.addDefenses(new DefensiveAdaptation("Subdermal Armor", new Credits(500),false));
                 break;
             case 2:
                 organismChoice.addDefenses(new DefensiveAdaptation("Rapid Clotting Tissue", new Credits(500),false));
@@ -321,7 +324,7 @@ public class App {
 
         switch (behaviorInput){
             case 1:
-                organismChoice.addBehaviors(new Behaviors("Infrared Vision"));
+                organismChoice.addBehaviors(new Behaviors("Imprinting Bonding"));
                 break;
             case 2:
                 organismChoice.addBehaviors(new Behaviors("Aggression Targeting"));
@@ -339,6 +342,27 @@ public class App {
                 break;
         }
     }
+
+    public static void acceleratedGrowth(){
+        System.out.println("Do you want Accelerated Growth?");
+        System.out.println(" ");
+        System.out.println("1) Yes");
+        System.out.println("2) No");
+        System.out.println("0) Back");
+        System.out.println("================");
+        int growthInput = input.nextInt();
+
+        switch (growthInput){
+            case 1:
+                organismChoice.setAcceleratedGrowth(true);
+                break;
+            case 2:
+                break;
+            case 0:
+                break;
+        }
+    }
+
     }
 
 
