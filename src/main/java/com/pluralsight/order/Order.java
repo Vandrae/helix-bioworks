@@ -43,12 +43,20 @@ public class Order {
     }
 
     public String getOrderSummary() {
+        StringBuilder newString = new StringBuilder();
+        for (Organism stringOrganism : creature){
+            newString.append(stringOrganism).append("\n\n");
+        }
+
         return "===========================" + "\n" +
                 "HELIX BIOWORKS " + "\n" +
                 "===========================" + "\n" +
-                creature + "\n" +
+                newString + "\n" +
                 "Transport package: " + transportPackage + "\n" +
                 "Maintenance: " + maintenance + "\n" +
-                "Total: " + getTotal();
+                "Total: " + getTotal() + "\n" +
+                " " + "\n\n";
     }
+
+
 }
