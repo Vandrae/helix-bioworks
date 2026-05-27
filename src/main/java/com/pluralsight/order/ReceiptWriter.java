@@ -2,7 +2,6 @@ package com.pluralsight.order;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -25,8 +24,6 @@ public class ReceiptWriter {
 
     }
     private static String generateTimestamp() {
-        // Create timestamp string useing a formatter
-        // return that string
 
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");

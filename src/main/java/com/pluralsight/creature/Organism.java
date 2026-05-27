@@ -50,11 +50,8 @@ public class Organism {
     //to string for receipt
     @Override
     public String toString() {
-        return "===========================" + "\n" +
-                "HELIX BIOWORKS " + "\n" +
-                "===========================" + "\n" +
-                "Genome: " + genome + " | Scale: " + scale + "\n" +
-                "Weapons: " + weapons + "\n" +
+        return "Genome: " + genome + " | Scale: " + scale + "\n" +
+                "Offensive Adaptations: " + weapons + "\n" +
                 "Defenses: " + defenses + "\n" +
                 "Mods: " + mods + "\n" +
                 "Behavioral conditioning: " + behaviors +"\n"+

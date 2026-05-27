@@ -1,10 +1,7 @@
 package com.pluralsight;
 
 import com.pluralsight.creature.*;
-import com.pluralsight.order.Maintenance;
-import com.pluralsight.order.Order;
-import com.pluralsight.order.Size;
-import com.pluralsight.order.TransportPackage;
+import com.pluralsight.order.*;
 
 import java.util.Scanner;
 
@@ -430,7 +427,7 @@ public class App {
 
     public static void Checkout(){
         System.out.println(order.getOrderSummary());
-
+        ReceiptWriter.receipt(order);
     }
 
     }
