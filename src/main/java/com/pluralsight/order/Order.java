@@ -43,20 +43,25 @@ public class Order {
     }
 
     public String getOrderSummary() {
+
         StringBuilder newString = new StringBuilder();
-        for (Organism stringOrganism : creature){
+        for (Organism stringOrganism : creature) {
             newString.append(stringOrganism).append("\n\n");
+        }
+        if (maintenance != null) {
+            newString.append("Maintenance: ").append(maintenance).append("\n");
+        }
+        if (transportPackage != null) {
+            newString.append("Transport package: ").append(transportPackage).append("\n");
+
+
         }
 
         return "===========================" + "\n" +
                 "HELIX BIOWORKS " + "\n" +
                 "===========================" + "\n" +
                 newString + "\n" +
-                "Transport package: " + transportPackage + "\n" +
-                "Maintenance: " + maintenance + "\n" +
                 "Total: " + getTotal() + "\n" +
                 " " + "\n\n";
     }
-
-
 }

@@ -123,6 +123,7 @@ public class App {
                     break;
                 case 8:
                     order.addOrganism(organismChoice);
+                    System.out.println(order.getOrderSummary());
                     return;
                 case 0:
                     return;
@@ -391,15 +392,19 @@ public class App {
         switch (transportInput){
             case 1:
                 order.setTransportPackage(new TransportPackage(Size.SMALL));
+                System.out.println(order.getOrderSummary());
                 break;
             case 2:
                 order.setTransportPackage(new TransportPackage(Size.MEDIUM));
+                System.out.println(order.getOrderSummary());
                 break;
             case 3:
                 order.setTransportPackage(new TransportPackage(Size.LARGE));
+                System.out.println(order.getOrderSummary());
                 break;
             case 4:
                 order.setTransportPackage(new TransportPackage(Size.EXTRA_LARGE));
+                System.out.println(order.getOrderSummary());
                 break;
             case 0:
                 break;
@@ -417,6 +422,7 @@ public class App {
         switch (maintenanceInput){
             case 1:
                 order.setMaintenance(new Maintenance());
+                System.out.println(order.getOrderSummary());
                 break;
             case 2:
                 break;
