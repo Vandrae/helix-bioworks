@@ -30,7 +30,7 @@ public class Organism {
             }
             wepCount += 1;
         }
-
+            //change to streams
         for (DefensiveAdaptation defense: defenses){
             if (defCount <= 2){
                 total = total.add(defense.getPrice(scale));

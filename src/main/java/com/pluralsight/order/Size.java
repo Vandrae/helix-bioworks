@@ -14,13 +14,13 @@ public enum Size {
                 return new Credits(500);
             }
             case MEDIUM -> {
-                return new Credits(2000);
+                return new Credits(1000);
             }
             case LARGE -> {
-                return new Credits(10000);
+                return new Credits(2000);
             }
             case EXTRA_LARGE -> {
-                return new Credits(50000);
+                return new Credits(5000);
             }default -> throw new IllegalStateException("Unknown Size");
         }
     }

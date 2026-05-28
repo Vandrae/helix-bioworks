@@ -17,12 +17,12 @@ public class App {
     }
     public static void homeMenu(){
         while (true){
-            System.out.println("================");
+            System.out.println("================================");
             System.out.println("HELIX BIOWORKS");
-            System.out.println("================");
+            System.out.println("================================");
             System.out.println("1) New Order");
             System.out.println("0) Exit");
-            System.out.println("================");
+            System.out.println("================================");
             int homeInput = input.nextInt();
 
                 //calls methods with code for each function
@@ -42,14 +42,14 @@ public class App {
 
     public static void addCreature(){
         while (true) {
-            System.out.println("================");
-            System.out.println("1) Commission Creature");
-            System.out.println("2) Template Creature");
+            System.out.println("================================");
+            System.out.println("1) Commission Creature (build form scratch)");
+            System.out.println("2) Template Creature (pre-built Creatures)");
             System.out.println("3) Add Transport Package");
             System.out.println("4) Add Maintenance Kit");
             System.out.println("5) Checkout");
             System.out.println("0) Cancel Order");
-            System.out.println("================");
+            System.out.println("================================");
             int newOrderInput = input.nextInt();
 
             switch (newOrderInput) {
@@ -82,17 +82,17 @@ public class App {
 
     public static void commissionCreature(){
         while (true) {
-            System.out.println("================");
+            System.out.println("================================");
             System.out.println("1) Genome");
             System.out.println("2) Size");
-            System.out.println("3) Offensive Adaptations");
-            System.out.println("4) Defensive Adaptations");
-            System.out.println("5) Standard Attributes");
-            System.out.println("6) Conditioning");
+            System.out.println("3) Offensive Adaptations (premium charge)");
+            System.out.println("4) Defensive Adaptations (premium charge)");
+            System.out.println("5) Standard Attributes ");
+            System.out.println("6) Behavioral Conditioning");
             System.out.println("7) Growth Vat (Accelerated Growth)");
             System.out.println("8) Add to Cart");
             System.out.println("0) Back");
-            System.out.println("================");
+            System.out.println("================================");
             int commissionInput = input.nextInt();
 
             switch (commissionInput) {
@@ -136,7 +136,7 @@ public class App {
     }
 
     public static void genomeMenu(){
-        System.out.println("================");
+        System.out.println("================================");
         System.out.println("1) Primate");
         System.out.println("2) Insectoid");
         System.out.println("3) Reptilian");
@@ -144,7 +144,7 @@ public class App {
         System.out.println("5) Aquatic");
         System.out.println("6) Apex");
         System.out.println("0) Back");
-        System.out.println("================");
+        System.out.println("================================");
         int genomeInput = input.nextInt();
 
         switch (genomeInput){
@@ -173,10 +173,10 @@ public class App {
 
     public static void sizeMenu(){
         System.out.println("================");
-        System.out.println("1) Class I");
-        System.out.println("2) Class II");
-        System.out.println("3) Class III");
-        System.out.println("4) Class IV");
+        System.out.println("1) Class I - ⏣800 (Dog)");
+        System.out.println("2) Class II - ⏣1200 (Human)");
+        System.out.println("3) Class III - ⏣10000 (Car)");
+        System.out.println("4) Class IV - ⏣15000 (Excavator)");
         System.out.println("0) Cancel Order");
         System.out.println("================");
         int sizeInput = input.nextInt();
@@ -205,6 +205,7 @@ public class App {
 
     public static void offensiveMenu(){
         while (true) {
+            System.out.println("Each option up to 3 is 500 the 4th and after is a compounding price on itself");
             System.out.println("================");
             System.out.println("1) Venom Glands");
             System.out.println("2) Razor bone spurs");
@@ -245,6 +246,7 @@ public class App {
 
     public static void defensiveMenu(){
         while (true) {
+            System.out.println("Each option up to 3 is 500 the 4th and after is a compounding price on itself");
             System.out.println("================");
             System.out.println("1) Subdermal Armor");
             System.out.println("2) Rapid Clotting Tissue");
@@ -285,7 +287,7 @@ public class App {
 
     public static void standardMenu() {
         while (true) {
-            System.out.println("Choose any number of Options");
+            System.out.println("Choose any number of Options no extra charge");
             System.out.println("================");
             System.out.println("1) Enhanced Smell");
             System.out.println("2) Infrared Vision");
@@ -329,7 +331,7 @@ public class App {
 
     public static void behaviorMenu() {
         while (true) {
-            System.out.println("Choose any number of Options");
+            System.out.println("Choose any number of Options no extra charge");
             System.out.println("================");
             System.out.println("1) Imprinting Bonding");
             System.out.println("2) Aggression Targeting");
@@ -383,10 +385,10 @@ public class App {
     }
 
     public static void templateCreature(){
-        System.out.println("================");
-        System.out.println("1) The Phantom");
+        System.out.println("================================");
+        System.out.println("1) The Phantom - ⏣7,200");
         System.out.println("0) Back");
-        System.out.println("================");
+        System.out.println("================================");
         int templateInput = input.nextInt();
 
         switch (templateInput){
@@ -400,13 +402,13 @@ public class App {
     }
 
     public static void transportPackage(){
-        System.out.println("================");
-        System.out.println("1) Class I");
-        System.out.println("2) Class II");
-        System.out.println("3) Class III");
-        System.out.println("4) Class IV");
+        System.out.println("================================");
+        System.out.println("1) Class I - ⏣500");
+        System.out.println("2) Class II - ⏣1000");
+        System.out.println("3) Class III - ⏣2000");
+        System.out.println("4) Class IV - ⏣5000");
         System.out.println("0) Back");
-        System.out.println("================");
+        System.out.println("================================");
         int transportInput = input.nextInt();
 
         switch (transportInput){
@@ -434,10 +436,10 @@ public class App {
     public static void maintenanceKit(){
         System.out.println("Do you want to add a Maintenance Kit?");
         System.out.println(" ");
-        System.out.println("1) Yes");
+        System.out.println("1) Yes - ⏣150 ");
         System.out.println("2) No");
         System.out.println("0) Back");
-        System.out.println("================");
+        System.out.println("================================");
         int maintenanceInput = input.nextInt();
         switch (maintenanceInput){
             case 1:
@@ -476,7 +478,3 @@ public class App {
         order.cancelOrder();
     }
     }
-
-
-
-
