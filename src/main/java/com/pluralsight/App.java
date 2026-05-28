@@ -25,8 +25,6 @@ public class App {
             System.out.println("================");
             int homeInput = input.nextInt();
 
-
-
                 //calls methods with code for each function
                 switch (homeInput) {
                     case 1:
@@ -71,7 +69,8 @@ public class App {
                     Checkout();
                     return;
                 case 0:
-                    //Cancel Order
+                    //Cancel Order using App.cancelOrder(); to makesure we call the correct cancelOrder() method
+                    App.cancelOrder();
                     return;
             }
         }
@@ -434,6 +433,10 @@ public class App {
     public static void Checkout(){
         System.out.println(order.getOrderSummary());
         ReceiptWriter.receipt(order);
+    }
+
+    public static void cancelOrder(){
+        order.cancelOrder();
     }
 
     }

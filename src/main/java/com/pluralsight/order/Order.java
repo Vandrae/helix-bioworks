@@ -28,6 +28,12 @@ public class Order {
         this.maintenance = maintenance;
     }
 
+    public void cancelOrder(){
+        creature.clear();
+        transportPackage = null;
+        maintenance = null;
+    }
+
     public Credits getTotal() {
         Credits total = new Credits(0);
         for (Organism singleCreature : creature) {
