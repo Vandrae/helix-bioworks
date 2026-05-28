@@ -432,13 +432,27 @@ public class App {
 
     public static void Checkout(){
         System.out.println(order.getOrderSummary());
-        ReceiptWriter.receipt(order);
+        confirmOrder();
     }
 
+    public static void confirmOrder(){
+        System.out.println("Are you sure you want to Check Out?");
+        System.out.println("1) Yes - Confirm");
+        System.out.println("2) No - Cancel Order");
+        int checkoutInput = input.nextInt();
+
+        switch (checkoutInput){
+            case 1:
+                ReceiptWriter.receipt(order);
+                break;
+            case 2:
+                cancelOrder();
+                break;
+        }
+    }
     public static void cancelOrder(){
         order.cancelOrder();
     }
-
     }
 
 
