@@ -4,6 +4,7 @@ import com.pluralsight.Credits;
 
 public class Maintenance {
 
+    //set price of a maintenance package
     public Credits getPrice(){
          return new Credits(150.00);
 

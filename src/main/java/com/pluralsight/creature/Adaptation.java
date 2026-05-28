@@ -27,6 +27,7 @@ public class Adaptation {
         }
     }
 
+    //message confirmation of what the premium charge is and for how much
     @Override
     public String toString() {
         return "Premium Charge - " + name + " | " + basePrice ;

@@ -39,9 +39,13 @@ public class Order {
         for (Organism singleCreature : creature) {
             total = total.add(singleCreature.getPrice());
         }
+
+        //if there is nothing on the transport package list don't print the list
         if (transportPackage != null) {
             total = total.add(transportPackage.getPrice());
         }
+
+        //if there is nothing on the transport package list don't print the list
         if (maintenance != null) {
             total = total.add(maintenance.getPrice());
         }
@@ -63,6 +67,7 @@ public class Order {
 
         }
 
+        // add a blank separator line between built items
         return "===========================" + "\n" +
                 "HELIX BIOWORKS " + "\n" +
                 "===========================" + "\n" +

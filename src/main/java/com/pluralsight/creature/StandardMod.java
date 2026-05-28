@@ -5,7 +5,6 @@ public class StandardMod {
     private String name;
 
     //methods
-
     @Override
     public String toString() {
         return "Standard Modifications: " + name ;

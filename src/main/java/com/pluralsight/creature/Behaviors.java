@@ -4,7 +4,6 @@ public class Behaviors {
     private String name;
 
     //methods
-
     @Override
     public String toString() {
         return "Behavioral conditioning: " + name ;

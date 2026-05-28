@@ -1,5 +1,5 @@
 package com.pluralsight.creature;
-//enum is a fixed list of options where only one option can be selected
+//fixed list of options where only one option can be selected
 public enum Genome {
     PRIMATE,
     INSECTOID,

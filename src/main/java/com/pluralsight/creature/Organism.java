@@ -15,17 +15,19 @@ public class Organism {
 
     //methods
     public Credits getPrice(){
-        //base price+class+defensive+offensive = total
+
         Credits total = scale.getBasePrice();
         int wepCount = 0;
         int defCount = 0;
-        //loop thrugh each item on the list then get the price of each weapon and add it to
+        //loop through each item on the list then get the price of each weapon and add it to
         // the price of the creature's size
         for (OffensiveAdaptation weapon: weapons){
             if (wepCount <= 2){
                 total = total.add(weapon.getPrice(scale));
             } else {
                 //compounding price if there are more than 3 adaptations on a single creature
+                //total of the first 3 x the price of the 4th
+                //total of 3 x the price of the 4th x the price of the 5th
                 total = new Credits(total.getAmount() * weapon.getPrice(scale).getAmount());
             }
             wepCount += 1;
@@ -41,7 +43,7 @@ public class Organism {
         }
 
         if (acceleratedGrowth == true){
-            //converting the product of amount a nd 1.15 back to a credit so it can be used
+            //converting the product of amount and 1.15 back to a credit so it can be used
             total = new Credits(total.getAmount() * 1.15);
         }
         return total;
@@ -62,7 +64,7 @@ public class Organism {
 
 
 
-    //constructor should have empty lists on it because we will populate them later
+
     public Organism(Genome genome, Scale scale, boolean acceleratedGrowth) {
         this.weapons = new ArrayList<>();
         this.defenses = new ArrayList<>();

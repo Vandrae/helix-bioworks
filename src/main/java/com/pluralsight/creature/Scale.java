@@ -8,6 +8,7 @@ public enum Scale {
     CLASS_III,
     CLASS_IV;
 
+    //set prices of each scale class
     public Credits getBasePrice(){
        switch (this){
            case CLASS_I -> {
