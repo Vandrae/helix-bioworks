@@ -44,9 +44,10 @@ public class App {
         while (true) {
             System.out.println("================");
             System.out.println("1) Commission Creature");
-            System.out.println("2) Add Transport Package");
-            System.out.println("3) Add Maintenance Kit");
-            System.out.println("4) Checkout");
+            System.out.println("2) Template Creature");
+            System.out.println("3) Add Transport Package");
+            System.out.println("4) Add Maintenance Kit");
+            System.out.println("5) Checkout");
             System.out.println("0) Cancel Order");
             System.out.println("================");
             int newOrderInput = input.nextInt();
@@ -57,14 +58,17 @@ public class App {
                     commissionCreature();
                     break;
                 case 2:
+                    templateCreature();
+                    break;
+                case 3:
                     //Add Transport Package
                     transportPackage();
                     break;
-                case 3:
+                case 4:
                     //Add Maintenance Kit
                     maintenanceKit();
                     break;
-                case 4:
+                case 5:
                     //Checkout
                     Checkout();
                     return;
@@ -378,6 +382,23 @@ public class App {
         }
     }
 
+    public static void templateCreature(){
+        System.out.println("================");
+        System.out.println("1) The Phantom");
+        System.out.println("0) Back");
+        System.out.println("================");
+        int templateInput = input.nextInt();
+
+        switch (templateInput){
+            case 1:
+                order.addOrganism(SignatureOrganism.phantom());
+                System.out.println(order.getOrderSummary());
+                break;
+            case 0:
+                break;
+        }
+    }
+
     public static void transportPackage(){
         System.out.println("================");
         System.out.println("1) Class I");
@@ -450,6 +471,7 @@ public class App {
                 break;
         }
     }
+
     public static void cancelOrder(){
         order.cancelOrder();
     }
