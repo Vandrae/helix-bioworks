@@ -86,9 +86,9 @@ public class App {
             System.out.println("2) Size");
             System.out.println("3) Offensive Adaptations (premium charge)");
             System.out.println("4) Defensive Adaptations (premium charge)");
-            System.out.println("5) Standard Attributes ");
+            System.out.println("5) Standard Attributes");
             System.out.println("6) Behavioral Conditioning");
-            System.out.println("7) Growth Vat (Accelerated Growth)");
+            System.out.println("7) Accelerated Growth +15% (Rush Order) ");
             System.out.println("8) Add to Cart");
             System.out.println("0) Back");
             System.out.println("================================");
@@ -149,21 +149,27 @@ public class App {
         switch (genomeInput){
             case 1:
                 genomeChoice = Genome.PRIMATE;
+                System.out.println("you selected the Primate Genome");
                 break;
             case 2:
                 genomeChoice = Genome.INSECTOID;
+                System.out.println("you selected the Insectoid Genome");
                 break;
             case 3:
                 genomeChoice = Genome.REPTILIAN;
+                System.out.println("you selected the Reptilian Genome");
                 break;
             case 4:
                 genomeChoice = Genome.AVIAN;
+                System.out.println("you selected the Avian Genome");
                 break;
             case 5:
                 genomeChoice = Genome.AQUATIC;
+                System.out.println("you selected the Aquatic Genome");
                 break;
             case 6:
                 genomeChoice = Genome.APEX;
+                System.out.println("you selected the Apex Genome");
                 break;
             case 0:
                 break;
@@ -183,15 +189,19 @@ public class App {
         switch (sizeInput){
             case 1:
                 scaleChoice = Scale.CLASS_I;
+                System.out.println("you selected Class I");
                 break;
             case 2:
                 scaleChoice = Scale.CLASS_II;
+                System.out.println("you selected Class II");
                 break;
             case 3:
                 scaleChoice = Scale.CLASS_III;
+                System.out.println("you selected Class III");
                 break;
             case 4:
                 scaleChoice = Scale.CLASS_IV;
+                System.out.println("you selected Class IV");
                 break;
             case 0:
                 break;
@@ -204,6 +214,7 @@ public class App {
 
     public static void offensiveMenu(){
         while (true) {
+            System.out.println("================================");
             System.out.println("Each option up to 3 is 500 the 4th and after is a compounding price on itself");
             System.out.println("================================");
             System.out.println("1) Venom Glands");
@@ -220,21 +231,27 @@ public class App {
             switch (offensiveInput) {
                 case 1:
                     organismChoice.addWeapons(new OffensiveAdaptation("Venom Glands", new Credits(500), false));
+                    System.out.println("Venom Glands has been added");
                     break;
                 case 2:
                     organismChoice.addWeapons(new OffensiveAdaptation("Razor bone spurs", new Credits(500), false));
+                    System.out.println("Razor bone spurs has been added");
                     break;
                 case 3:
                     organismChoice.addWeapons(new OffensiveAdaptation("Bio-electric organs", new Credits(500), false));
+                    System.out.println("Bio-electric organs has been added");
                     break;
                 case 4:
                     organismChoice.addWeapons(new OffensiveAdaptation("Acid secretion sacs", new Credits(500), false));
+                    System.out.println("Acid secretion sacs has been added");
                     break;
                 case 5:
                     organismChoice.addWeapons(new OffensiveAdaptation("Crushing Appendages", new Credits(500), false));
+                    System.out.println("Crushing Appendages has been added");
                     break;
                 case 6:
                     organismChoice.addWeapons(new OffensiveAdaptation("Active Camouflage", new Credits(500), false));
+                    System.out.println("Active Camouflage has been added");
                     break;
                 case 0:
                     return;
@@ -245,6 +262,7 @@ public class App {
 
     public static void defensiveMenu(){
         while (true) {
+            System.out.println("================================");
             System.out.println("Each option up to 3 is 500 the 4th and after is a compounding price on itself");
             System.out.println("================================");
             System.out.println("1) Subdermal Armor");
@@ -261,21 +279,27 @@ public class App {
             switch (defensiveInput) {
                 case 1:
                     organismChoice.addDefenses(new DefensiveAdaptation("Subdermal Armor", new Credits(500), false));
+                    System.out.println("Subdermal Armor has been added");
                     break;
                 case 2:
                     organismChoice.addDefenses(new DefensiveAdaptation("Rapid Clotting Tissue", new Credits(500), false));
+                    System.out.println("Rapid Clotting Tissue has been added");
                     break;
                 case 3:
                     organismChoice.addDefenses(new DefensiveAdaptation("Toxin Immunity", new Credits(500), false));
+                    System.out.println("Toxin Immunity has been added");
                     break;
                 case 4:
                     organismChoice.addDefenses(new DefensiveAdaptation("Chromatophore Camo", new Credits(500), false));
+                    System.out.println("Chromatophore Camo has been added");
                     break;
                 case 5:
                     organismChoice.addDefenses(new DefensiveAdaptation("Severe Heat Hide", new Credits(500), false));
+                    System.out.println("Severe Heat Hide has been added");
                     break;
                 case 6:
                     organismChoice.addDefenses(new DefensiveAdaptation("Severe Cold Hide", new Credits(500), false));
+                    System.out.println("Severe Cold Hide has been added");
                     break;
                 case 0:
                     return;
@@ -286,6 +310,7 @@ public class App {
 
     public static void standardMenu() {
         while (true) {
+            System.out.println("================================");
             System.out.println("Choose any number of Options no extra charge");
             System.out.println("================================");
             System.out.println("1) Enhanced Smell");
@@ -302,24 +327,31 @@ public class App {
             switch (standardInput) {
                 case 1:
                     organismChoice.addMods(new StandardMod("Enhanced Smell"));
+                    System.out.println("Enhanced Smell has been added");
                     break;
                 case 2:
                     organismChoice.addMods(new StandardMod("Infrared Vision"));
+                    System.out.println("Infrared Vision has been added");
                     break;
                 case 3:
                     organismChoice.addMods(new StandardMod("Increased Stamina"));
+                    System.out.println("Increased Stamina has been added");
                     break;
                 case 4:
                     organismChoice.addMods(new StandardMod("Aggression tuning"));
+                    System.out.println("Aggression Tuning has been added");
                     break;
                 case 5:
                     organismChoice.addMods(new StandardMod("Pack Tactics"));
+                    System.out.println("Pack Tactics has been added");
                     break;
                 case 6:
                     organismChoice.addMods(new StandardMod("Vocal Suppression"));
+                    System.out.println("Vocal Suppression has been added");
                     break;
                 case 7:
                     organismChoice.addMods(new StandardMod("Neural Compliance"));
+                    System.out.println("Neural Compliance has been added");
                     break;
                 case 0:
                     return;
@@ -330,6 +362,7 @@ public class App {
 
     public static void behaviorMenu() {
         while (true) {
+            System.out.println("================================");
             System.out.println("Choose any number of Options no extra charge");
             System.out.println("================================");
             System.out.println("1) Imprinting Bonding");
@@ -344,18 +377,23 @@ public class App {
             switch (behaviorInput) {
                 case 1:
                     organismChoice.addBehaviors(new Behaviors("Imprinting Bonding"));
+                    System.out.println("Imprinting Bonding has been added");
                     break;
                 case 2:
                     organismChoice.addBehaviors(new Behaviors("Aggression Targeting"));
+                    System.out.println("Aggression Targeting has been added");
                     break;
                 case 3:
                     organismChoice.addBehaviors(new Behaviors("Territorial"));
+                    System.out.println("Territorial has been added");
                     break;
                 case 4:
                     organismChoice.addBehaviors(new Behaviors("Feral"));
+                    System.out.println("Feral has been added");
                     break;
                 case 5:
                     organismChoice.addBehaviors(new Behaviors("Memory Erasure"));
+                    System.out.println("Memory Erasure has been added");
                     break;
                 case 0:
                     return;
@@ -375,6 +413,7 @@ public class App {
         switch (growthInput){
             case 1:
                 organismChoice.setAcceleratedGrowth(true);
+                System.out.println("Accelerated Growth has been added");
                 break;
             case 2:
                 break;
@@ -394,6 +433,7 @@ public class App {
             case 1:
                 order.addOrganism(SignatureOrganism.phantom());
                 System.out.println(order.getOrderSummary());
+                System.out.println("The Phantom has been added");
                 break;
             case 0:
                 break;
@@ -414,18 +454,22 @@ public class App {
             case 1:
                 order.setTransportPackage(new TransportPackage(Size.SMALL));
                 System.out.println(order.getOrderSummary());
+                System.out.println("Class I transport Package added");
                 break;
             case 2:
                 order.setTransportPackage(new TransportPackage(Size.MEDIUM));
                 System.out.println(order.getOrderSummary());
+                System.out.println("Class II transport Package added");
                 break;
             case 3:
                 order.setTransportPackage(new TransportPackage(Size.LARGE));
                 System.out.println(order.getOrderSummary());
+                System.out.println("Class III transport Package added");
                 break;
             case 4:
                 order.setTransportPackage(new TransportPackage(Size.EXTRA_LARGE));
                 System.out.println(order.getOrderSummary());
+                System.out.println("Class IV transport Package added");
                 break;
             case 0:
                 break;
@@ -444,6 +488,7 @@ public class App {
             case 1:
                 order.setMaintenance(new Maintenance());
                 System.out.println(order.getOrderSummary());
+                System.out.println("Maintenance Kit added");
                 break;
             case 2:
                 break;
