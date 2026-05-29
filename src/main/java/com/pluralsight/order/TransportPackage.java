@@ -3,7 +3,7 @@ package com.pluralsight.order;
 import com.pluralsight.Credits;
 
 public class TransportPackage {
-    private Size size;
+    private final Size size;
 
     //methods
     public Credits getPrice(){

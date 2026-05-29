@@ -5,46 +5,46 @@ import com.pluralsight.Credits;
 import java.util.ArrayList;
 
 public class Organism {
-    private ArrayList<OffensiveAdaptation> weapons;
-    private ArrayList<DefensiveAdaptation> defenses;
-    private ArrayList<StandardMod> mods;
-    private ArrayList<Behaviors> behaviors;
+    private final ArrayList<OffensiveAdaptation> weapons;
+    private final ArrayList<DefensiveAdaptation> defenses;
+    private final ArrayList<StandardMod> mods;
+    private final ArrayList<Behaviors> behaviors;
     private Genome genome;
     private Scale scale;
     boolean acceleratedGrowth;
 
     //methods
-    public Credits getPrice(){
+    public Credits getPrice() {
 
         Credits total = scale.getBasePrice();
         int wepCount = 0;
         int defCount = 0;
         //loop through each item on the list then get the price of each weapon and add it to
         // the price of the creature's size
-        for (OffensiveAdaptation weapon: weapons){
-            if (wepCount <= 2){
+        for (OffensiveAdaptation weapon : weapons) {
+            if (wepCount <= 2) {
                 total = total.add(weapon.getPrice(scale));
             } else {
                 //compounding price if there are more than 3 adaptations on a single creature
                 //total of the first 3 x the price of the 4th
                 //total of 3 x the price of the 4th x the price of the 5th
-                total = new Credits(total.getAmount() * weapon.getPrice(scale).getAmount());
+                total = new Credits(total.amount() * weapon.getPrice(scale).amount());
             }
             wepCount += 1;
         }
-            //change to streams
-        for (DefensiveAdaptation defense: defenses){
-            if (defCount <= 2){
+
+        for (DefensiveAdaptation defense : defenses) {
+            if (defCount <= 2) {
                 total = total.add(defense.getPrice(scale));
             } else {
-                total = new Credits(total.getAmount() * defense.getPrice(scale).getAmount());
+                total = new Credits(total.amount() * defense.getPrice(scale).amount());
             }
             defCount += 1;
         }
 
-        if (acceleratedGrowth == true){
+        if (acceleratedGrowth) {
             //converting the product of amount and 1.15 back to a credit so it can be used
-            total = new Credits(total.getAmount() * 1.15);
+            total = new Credits(total.amount() * 1.15);
         }
         return total;
     }
@@ -56,13 +56,11 @@ public class Organism {
                 "Offensive Adaptations: " + weapons + "\n" +
                 "Defenses: " + defenses + "\n" +
                 "Mods: " + mods + "\n" +
-                "Behavioral conditioning: " + behaviors +"\n"+
+                "Behavioral conditioning: " + behaviors + "\n" +
                 //changes True/False to Yes/No
-                "Accelerated Growth: " + (acceleratedGrowth ? "Yes" : "No") +"\n"+
+                "Accelerated Growth: " + (acceleratedGrowth ? "Yes" : "No") + "\n" +
                 "Total Price: " + getPrice();
     }
-
-
 
 
     public Organism(Genome genome, Scale scale, boolean acceleratedGrowth) {

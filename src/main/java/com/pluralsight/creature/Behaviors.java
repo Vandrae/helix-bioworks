@@ -6,7 +6,7 @@ public class Behaviors {
     //methods
     @Override
     public String toString() {
-        return "Behavioral conditioning: " + name ;
+        return "Behavioral conditioning: " + name;
     }
 
     //constructor

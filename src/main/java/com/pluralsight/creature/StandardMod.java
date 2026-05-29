@@ -7,7 +7,7 @@ public class StandardMod {
     //methods
     @Override
     public String toString() {
-        return "Standard Modifications: " + name ;
+        return "Standard Modifications: " + name;
     }
 
     //constructor

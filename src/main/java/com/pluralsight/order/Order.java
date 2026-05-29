@@ -6,7 +6,7 @@ import com.pluralsight.creature.Organism;
 import java.util.ArrayList;
 
 public class Order {
-    private ArrayList<Organism> creature;
+    private final ArrayList<Organism> creature;
     private TransportPackage transportPackage;
     private Maintenance maintenance;
 

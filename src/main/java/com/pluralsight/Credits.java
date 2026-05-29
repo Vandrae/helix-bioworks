@@ -1,11 +1,9 @@
 package com.pluralsight;
 
-public class Credits {
-
-    private double amount;
+public record Credits(double amount) {
 
     //methods
-    public Credits add (Credits cost){
+    public Credits add(Credits cost) {
         return new Credits(this.amount + cost.amount);
     }
 
@@ -15,13 +13,6 @@ public class Credits {
     }
 
     //constructor
-    public Credits(double amount) {
-        this.amount = amount;
-    }
 
     //getter/setter
-
-    public double getAmount() {
-        return amount;
-    }
 }

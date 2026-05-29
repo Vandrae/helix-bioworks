@@ -8,19 +8,19 @@ public class Adaptation {
     private boolean isExtra;
 
     //methods
-    public Credits getPrice(Scale scale){
-        switch (scale){
+    public Credits getPrice(Scale scale) {
+        switch (scale) {
             case CLASS_I -> {
-                return new Credits(basePrice.getAmount() * 1);
+                return new Credits(basePrice.amount() * 1);
             }
             case CLASS_II -> {
-                return new Credits(basePrice.getAmount() * 2);
+                return new Credits(basePrice.amount() * 2);
             }
             case CLASS_III -> {
-                return new Credits(basePrice.getAmount() * 3);
+                return new Credits(basePrice.amount() * 3);
             }
             case CLASS_IV -> {
-                return new Credits(basePrice.getAmount() * 4);
+                return new Credits(basePrice.amount() * 4);
             }
             default -> throw new IllegalStateException("Unknown Scale Class");
 
@@ -30,7 +30,7 @@ public class Adaptation {
     //message confirmation of what the premium charge is and for how much
     @Override
     public String toString() {
-        return "Premium Charge - " + name + " | " + basePrice ;
+        return "Premium Charge - " + name + " | " + basePrice;
     }
 
     //constructor

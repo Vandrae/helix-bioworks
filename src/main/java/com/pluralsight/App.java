@@ -11,11 +11,13 @@ public class App {
     public static Organism organismChoice;
     public static Genome genomeChoice;
     public static Scale scaleChoice;
+
     public static void main(String[] args) {
         homeMenu();
     }
-    public static void homeMenu(){
-        while (true){
+
+    public static void homeMenu() {
+        while (true) {
             System.out.println("================================");
             System.out.println("HELIX BIOWORKS");
             System.out.println("================================");
@@ -24,22 +26,22 @@ public class App {
             System.out.println("================================");
             int homeInput = input.nextInt();
 
-                //calls methods with code for each function
-                switch (homeInput) {
-                    case 1:
-                        addCreature();
-                        break;
-                    case 0:
-                        System.out.println("The program exits");
-                        return;
-                }
-
+            //calls methods with code for each function
+            switch (homeInput) {
+                case 1:
+                    addCreature();
+                    break;
+                case 0:
+                    System.out.println("The program exits");
+                    return;
             }
 
         }
+
+    }
     //menu methods
 
-    public static void addCreature(){
+    public static void addCreature() {
         while (true) {
             System.out.println("================================");
             System.out.println("1) Commission Creature (build form scratch)");
@@ -79,7 +81,7 @@ public class App {
         }
     }
 
-    public static void commissionCreature(){
+    public static void commissionCreature() {
         while (true) {
             System.out.println("================================");
             System.out.println("1) Genome");
@@ -134,7 +136,7 @@ public class App {
 
     }
 
-    public static void genomeMenu(){
+    public static void genomeMenu() {
         System.out.println("================================");
         System.out.println("1) Primate");
         System.out.println("2) Insectoid");
@@ -146,7 +148,7 @@ public class App {
         System.out.println("================================");
         int genomeInput = input.nextInt();
 
-        switch (genomeInput){
+        switch (genomeInput) {
             case 1:
                 genomeChoice = Genome.PRIMATE;
                 System.out.println("you selected the Primate Genome");
@@ -176,7 +178,7 @@ public class App {
         }
     }
 
-    public static void sizeMenu(){
+    public static void sizeMenu() {
         System.out.println("================================");
         System.out.println("1) Class I - ⏣800 (Dog)");
         System.out.println("2) Class II - ⏣1200 (Human)");
@@ -186,7 +188,7 @@ public class App {
         System.out.println("================================");
         int sizeInput = input.nextInt();
 
-        switch (sizeInput){
+        switch (sizeInput) {
             case 1:
                 scaleChoice = Scale.CLASS_I;
                 System.out.println("you selected Class I");
@@ -206,13 +208,14 @@ public class App {
             case 0:
                 break;
 
-        }if (sizeInput >= 1){
+        }
+        if (sizeInput >= 1) {
             organismChoice = new Organism(genomeChoice, scaleChoice, false);
         }
 
     }
 
-    public static void offensiveMenu(){
+    public static void offensiveMenu() {
         while (true) {
             System.out.println("================================");
             System.out.println("Each option up to 3 is 500 the 4th and after is a compounding price on itself");
@@ -260,7 +263,7 @@ public class App {
         }
     }
 
-    public static void defensiveMenu(){
+    public static void defensiveMenu() {
         while (true) {
             System.out.println("================================");
             System.out.println("Each option up to 3 is 500 the 4th and after is a compounding price on itself");
@@ -401,7 +404,7 @@ public class App {
         }
     }
 
-    public static void acceleratedGrowth(){
+    public static void acceleratedGrowth() {
         System.out.println("Do you want Accelerated Growth?");
         System.out.println(" ");
         System.out.println("1) Yes");
@@ -410,7 +413,7 @@ public class App {
         System.out.println("================================");
         int growthInput = input.nextInt();
 
-        switch (growthInput){
+        switch (growthInput) {
             case 1:
                 organismChoice.setAcceleratedGrowth(true);
                 System.out.println("Accelerated Growth has been added");
@@ -422,14 +425,14 @@ public class App {
         }
     }
 
-    public static void templateCreature(){
+    public static void templateCreature() {
         System.out.println("================================");
         System.out.println("1) The Phantom - ⏣7,200");
         System.out.println("0) Back");
         System.out.println("================================");
         int templateInput = input.nextInt();
 
-        switch (templateInput){
+        switch (templateInput) {
             case 1:
                 order.addOrganism(SignatureOrganism.phantom());
                 System.out.println(order.getOrderSummary());
@@ -440,7 +443,7 @@ public class App {
         }
     }
 
-    public static void transportPackage(){
+    public static void transportPackage() {
         System.out.println("================================");
         System.out.println("1) Class I - ⏣500");
         System.out.println("2) Class II - ⏣1000");
@@ -450,7 +453,7 @@ public class App {
         System.out.println("================================");
         int transportInput = input.nextInt();
 
-        switch (transportInput){
+        switch (transportInput) {
             case 1:
                 order.setTransportPackage(new TransportPackage(Size.SMALL));
                 System.out.println(order.getOrderSummary());
@@ -476,7 +479,7 @@ public class App {
         }
     }
 
-    public static void maintenanceKit(){
+    public static void maintenanceKit() {
         System.out.println("Do you want to add a Maintenance Kit?");
         System.out.println(" ");
         System.out.println("1) Yes - ⏣150 ");
@@ -484,7 +487,7 @@ public class App {
         System.out.println("0) Back");
         System.out.println("================================");
         int maintenanceInput = input.nextInt();
-        switch (maintenanceInput){
+        switch (maintenanceInput) {
             case 1:
                 order.setMaintenance(new Maintenance());
                 System.out.println(order.getOrderSummary());
@@ -497,18 +500,18 @@ public class App {
         }
     }
 
-    public static void Checkout(){
+    public static void Checkout() {
         System.out.println(order.getOrderSummary());
         confirmOrder();
     }
 
-    public static void confirmOrder(){
+    public static void confirmOrder() {
         System.out.println("Are you sure you want to Check Out?");
         System.out.println("1) Yes - Confirm");
         System.out.println("2) No - Cancel Order");
         int checkoutInput = input.nextInt();
 
-        switch (checkoutInput){
+        switch (checkoutInput) {
             case 1:
                 ReceiptWriter.receipt(order);
                 break;
@@ -518,7 +521,7 @@ public class App {
         }
     }
 
-    public static void cancelOrder(){
+    public static void cancelOrder() {
         order.cancelOrder();
     }
-    }
+}
