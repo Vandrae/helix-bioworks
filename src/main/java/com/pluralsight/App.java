@@ -18,12 +18,14 @@ public class App {
 
     public static void homeMenu() {
         while (true) {
-            System.out.println("================================");
-            System.out.println("HELIX BIOWORKS");
-            System.out.println("================================");
+            System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║        HELIX BIOWORKS        ║
+                     ╚══════════════════════════════╝
+                    """);
             System.out.println("1) New Order");
             System.out.println("0) Exit");
-            System.out.println("================================");
+            System.out.println(" ");
             int homeInput = input.nextInt();
 
             //calls methods with code for each function
@@ -43,14 +45,18 @@ public class App {
 
     public static void addCreature() {
         while (true) {
-            System.out.println("================================");
+            System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║           New Order          ║
+                     ╚══════════════════════════════╝
+                    """);
             System.out.println("1) Commission Creature (build form scratch)");
             System.out.println("2) Template Creature (pre-built Creatures)");
             System.out.println("3) Add Transport Package");
             System.out.println("4) Add Maintenance Kit");
             System.out.println("5) Checkout");
             System.out.println("0) Cancel Order");
-            System.out.println("================================");
+            System.out.println(" ");
             int newOrderInput = input.nextInt();
 
             switch (newOrderInput) {
@@ -83,7 +89,11 @@ public class App {
 
     public static void commissionCreature() {
         while (true) {
-            System.out.println("================================");
+            System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║      Commission Creature     ║
+                     ╚══════════════════════════════╝
+                    """);
             System.out.println("1) Genome");
             System.out.println("2) Size");
             System.out.println("3) Offensive Adaptations (premium charge)");
@@ -93,7 +103,7 @@ public class App {
             System.out.println("7) Accelerated Growth +15% (Rush Order) ");
             System.out.println("8) Add to Cart");
             System.out.println("0) Back");
-            System.out.println("================================");
+            System.out.println(" ");
             int commissionInput = input.nextInt();
 
             switch (commissionInput) {
@@ -137,7 +147,11 @@ public class App {
     }
 
     public static void genomeMenu() {
-        System.out.println("================================");
+        System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║          Genome Menu         ║
+                     ╚══════════════════════════════╝
+                    """);
         System.out.println("1) Primate");
         System.out.println("2) Insectoid");
         System.out.println("3) Reptilian");
@@ -145,33 +159,39 @@ public class App {
         System.out.println("5) Aquatic");
         System.out.println("6) Apex");
         System.out.println("0) Back");
-        System.out.println("================================");
+        System.out.println(" ");
         int genomeInput = input.nextInt();
 
         switch (genomeInput) {
             case 1:
                 genomeChoice = Genome.PRIMATE;
                 System.out.println("you selected the Primate Genome");
+                System.out.println(" ");
                 break;
             case 2:
                 genomeChoice = Genome.INSECTOID;
                 System.out.println("you selected the Insectoid Genome");
+                System.out.println(" ");
                 break;
             case 3:
                 genomeChoice = Genome.REPTILIAN;
                 System.out.println("you selected the Reptilian Genome");
+                System.out.println(" ");
                 break;
             case 4:
                 genomeChoice = Genome.AVIAN;
                 System.out.println("you selected the Avian Genome");
+                System.out.println(" ");
                 break;
             case 5:
                 genomeChoice = Genome.AQUATIC;
                 System.out.println("you selected the Aquatic Genome");
+                System.out.println(" ");
                 break;
             case 6:
                 genomeChoice = Genome.APEX;
                 System.out.println("you selected the Apex Genome");
+                System.out.println(" ");
                 break;
             case 0:
                 break;

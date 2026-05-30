@@ -11,8 +11,4 @@ public record Credits(double amount) {
     public String toString() {
         return String.format("⏣%,.2f", amount) + " " + "CR";
     }
-
-    //constructor
-
-    //getter/setter
 }
