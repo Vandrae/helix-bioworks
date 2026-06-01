@@ -68,9 +68,10 @@ public class Order {
         }
 
         // add a blank separator line between built items
-        return "===========================" + "\n" +
-                "HELIX BIOWORKS " + "\n" +
-                "===========================" + "\n" +
+        return "╔══════════════════════════════╗" + "\n" +
+                "║        HELIX BIOWORKS        ║" + "\n" +
+                "╚══════════════════════════════╝" + "\n" +
+                " " + "\n" +
                 newString + "\n" +
                 "Total: " + getTotal() + "\n" +
                 " " + "\n\n";

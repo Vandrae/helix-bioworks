@@ -47,7 +47,7 @@ public class App {
         while (true) {
             System.out.println("""
                      ╔══════════════════════════════╗
-                     ║           New Order          ║
+                     ║          Order Menu          ║
                      ╚══════════════════════════════╝
                     """);
             System.out.println("1) Commission Creature (build form scratch)");
@@ -199,13 +199,17 @@ public class App {
     }
 
     public static void sizeMenu() {
-        System.out.println("================================");
+        System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║           Size Menu          ║
+                     ╚══════════════════════════════╝
+                    """);
         System.out.println("1) Class I - ⏣800 (Dog)");
         System.out.println("2) Class II - ⏣1200 (Human)");
         System.out.println("3) Class III - ⏣10000 (Car)");
         System.out.println("4) Class IV - ⏣15000 (Excavator)");
         System.out.println("0) Cancel Order");
-        System.out.println("================================");
+        System.out.println(" ");
         int sizeInput = input.nextInt();
 
         switch (sizeInput) {
@@ -237,9 +241,13 @@ public class App {
 
     public static void offensiveMenu() {
         while (true) {
-            System.out.println("================================");
+            System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║       Offensive Traits       ║
+                     ╚══════════════════════════════╝
+                    """);
             System.out.println("Each option up to 3 is 500 the 4th and after is a compounding price on itself");
-            System.out.println("================================");
+            System.out.println(" ");
             System.out.println("1) Venom Glands");
             System.out.println("2) Razor bone spurs");
             System.out.println("3) Bio-electric organs");
@@ -247,7 +255,7 @@ public class App {
             System.out.println("5) Crushing Appendages");
             System.out.println("6) Active Camouflage");
             System.out.println("0) Back");
-            System.out.println("================================");
+            System.out.println(" ");
             int offensiveInput = input.nextInt();
 
 
@@ -285,9 +293,13 @@ public class App {
 
     public static void defensiveMenu() {
         while (true) {
-            System.out.println("================================");
+            System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║       Defensive Traits       ║
+                     ╚══════════════════════════════╝
+                    """);
             System.out.println("Each option up to 3 is 500 the 4th and after is a compounding price on itself");
-            System.out.println("================================");
+            System.out.println(" ");
             System.out.println("1) Subdermal Armor");
             System.out.println("2) Rapid Clotting Tissue");
             System.out.println("3) Toxin Immunity");
@@ -295,7 +307,7 @@ public class App {
             System.out.println("5) Severe Heat Hide");
             System.out.println("6) Severe Cold Hide");
             System.out.println("0) Back");
-            System.out.println("================================");
+            System.out.println(" ");
             int defensiveInput = input.nextInt();
 
 
@@ -333,9 +345,13 @@ public class App {
 
     public static void standardMenu() {
         while (true) {
-            System.out.println("================================");
+            System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║       Standard Traits        ║
+                     ╚══════════════════════════════╝
+                    """);
             System.out.println("Choose any number of Options no extra charge");
-            System.out.println("================================");
+            System.out.println(" ");
             System.out.println("1) Enhanced Smell");
             System.out.println("2) Infrared Vision");
             System.out.println("3) Increased Stamina");
@@ -344,7 +360,7 @@ public class App {
             System.out.println("6) Vocal Suppression");
             System.out.println("7) Neural Compliance");
             System.out.println("0) Back");
-            System.out.println("================================");
+            System.out.println(" ");
             int standardInput = input.nextInt();
 
             switch (standardInput) {
@@ -385,16 +401,20 @@ public class App {
 
     public static void behaviorMenu() {
         while (true) {
-            System.out.println("================================");
+            System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║    Behavioral Conditioning   ║
+                     ╚══════════════════════════════╝
+                    """);
             System.out.println("Choose any number of Options no extra charge");
-            System.out.println("================================");
+            System.out.println(" ");
             System.out.println("1) Imprinting Bonding");
             System.out.println("2) Aggression Targeting");
             System.out.println("3) Territorial");
             System.out.println("4) Feral");
             System.out.println("5) Memory Erasure");
             System.out.println("0) Back");
-            System.out.println("================================");
+            System.out.println(" ");
             int behaviorInput = input.nextInt();
 
             switch (behaviorInput) {
@@ -430,7 +450,7 @@ public class App {
         System.out.println("1) Yes");
         System.out.println("2) No");
         System.out.println("0) Back");
-        System.out.println("================================");
+        System.out.println(" ");
         int growthInput = input.nextInt();
 
         switch (growthInput) {
@@ -446,10 +466,15 @@ public class App {
     }
 
     public static void templateCreature() {
-        System.out.println("================================");
+        System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║      Template Creatures      ║
+                     ╚══════════════════════════════╝
+                    """);
+        System.out.println(" ");
         System.out.println("1) The Phantom - ⏣7,200");
         System.out.println("0) Back");
-        System.out.println("================================");
+        System.out.println(" ");
         int templateInput = input.nextInt();
 
         switch (templateInput) {
@@ -464,35 +489,40 @@ public class App {
     }
 
     public static void transportPackage() {
-        System.out.println("================================");
-        System.out.println("1) Class I - ⏣500");
-        System.out.println("2) Class II - ⏣1000");
-        System.out.println("3) Class III - ⏣2000");
-        System.out.println("4) Class IV - ⏣5000");
+        System.out.println("""
+                     ╔══════════════════════════════╗
+                     ║       Transport Package      ║
+                     ╚══════════════════════════════╝
+                    """);
+        System.out.println(" ");
+        System.out.println("1) Small Transport Crate - ⏣500");
+        System.out.println("2) Medium Transport Crate - ⏣1000");
+        System.out.println("3) Large Transport Crate - ⏣2000");
+        System.out.println("4) Extra Large Transport Crate - ⏣5000");
         System.out.println("0) Back");
-        System.out.println("================================");
+        System.out.println(" ");
         int transportInput = input.nextInt();
 
         switch (transportInput) {
             case 1:
                 order.setTransportPackage(new TransportPackage(Size.SMALL));
                 System.out.println(order.getOrderSummary());
-                System.out.println("Class I transport Package added");
+                System.out.println("Small Transport Crate added");
                 break;
             case 2:
                 order.setTransportPackage(new TransportPackage(Size.MEDIUM));
                 System.out.println(order.getOrderSummary());
-                System.out.println("Class II transport Package added");
+                System.out.println("Medium Transport Crate added");
                 break;
             case 3:
                 order.setTransportPackage(new TransportPackage(Size.LARGE));
                 System.out.println(order.getOrderSummary());
-                System.out.println("Class III transport Package added");
+                System.out.println("Large Transport Crate added");
                 break;
             case 4:
                 order.setTransportPackage(new TransportPackage(Size.EXTRA_LARGE));
                 System.out.println(order.getOrderSummary());
-                System.out.println("Class IV transport Package added");
+                System.out.println("Extra Large Transport Crate added");
                 break;
             case 0:
                 break;
