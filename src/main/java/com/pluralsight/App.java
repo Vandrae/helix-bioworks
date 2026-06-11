@@ -11,6 +11,8 @@ public class App {
     public static Organism organismChoice;
     public static Genome genomeChoice;
     public static Scale scaleChoice;
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
 
     public static void main(String[] args) {
         homeMenu();
@@ -96,11 +98,11 @@ public class App {
                     """);
             System.out.println("1) Genome");
             System.out.println("2) Size");
-            System.out.println("3) Offensive Adaptations (premium charge)");
-            System.out.println("4) Defensive Adaptations (premium charge)");
+            System.out.println(ANSI_YELLOW +"3) Offensive Adaptations (premium charge)");
+            System.out.println("4) Defensive Adaptations (premium charge)" + ANSI_RESET);
             System.out.println("5) Standard Attributes");
             System.out.println("6) Behavioral Conditioning");
-            System.out.println("7) Accelerated Growth +15% (Rush Order) ");
+            System.out.println(ANSI_YELLOW + "7) Accelerated Growth +15% (Rush Order)" + ANSI_RESET);
             System.out.println("8) Add to Cart");
             System.out.println("0) Back");
             System.out.println(" ");
