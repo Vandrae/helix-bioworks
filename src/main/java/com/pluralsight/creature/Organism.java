@@ -3,6 +3,8 @@ package com.pluralsight.creature;
 import com.pluralsight.Credits;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Organism {
     private final ArrayList<OffensiveAdaptation> weapons;
@@ -52,11 +54,21 @@ public class Organism {
     //to string for receipt
     @Override
     public String toString() {
-        return "Genome: " + genome + " | Scale: " + scale + "\n" +
-                "Offensive Adaptations: " + weapons + "\n" +
-                "Defenses: " + defenses + "\n" +
-                "Mods: " + mods + "\n" +
-                "Behavioral conditioning: " + behaviors + "\n" +
+        return "Genome: " + genome + "\n" +
+                "Scale: " + scale + "\n" +
+                " " + "\n" +
+                "Offensive Adaptations: " + "\n" +
+                formatList(weapons, false) + "\n" +
+                " " + "\n" +
+                "Defensive Adaptations: " + "\n" +
+                formatList(defenses, false) + "\n" +
+                " " + "\n" +
+                "Mods: " + "\n" +
+                formatList(mods, false) + "\n" +
+                " " + "\n" +
+                "Behavioral conditioning: " + "\n" +
+                formatList(behaviors, false) + "\n" +
+                " " + "\n" +
                 //changes True/False to Yes/No
                 "Accelerated Growth: " + (acceleratedGrowth ? "Yes" : "No") + "\n" +
                 "Total Price: " + getPrice();
@@ -73,25 +85,25 @@ public class Organism {
         this.acceleratedGrowth = acceleratedGrowth;
     }
 
-    //getter/setter
-    public Genome getGenome() {
-        return genome;
-    }
+    //Format Lists to be used in tostring for better looking outputs
+    //a list of anytype and everything on it is converted into a string
+    private String formatList(List<?> items, boolean brackets){
+        String open;
+        if (brackets){
+            open ="[\n ";
+        }else{
+            open = " ";
+        }
 
-    public void setGenome(Genome genome) {
-        this.genome = genome;
-    }
+        String close;
+        if (brackets){
+            close ="\n]";
+        }else{
+            close = " ";
+        }
 
-    public Scale getScale() {
-        return scale;
-    }
-
-    public void setScale(Scale scale) {
-        this.scale = scale;
-    }
-
-    public boolean isAcceleratedGrowth() {
-        return acceleratedGrowth;
+        return items.stream().map(item -> item.toString())
+                .collect(Collectors.joining(",\n  ", open, close));
     }
 
     //add to arraylist
@@ -103,17 +115,11 @@ public class Organism {
         weapons.add(singleWeapon);
     }
 
-    public ArrayList<OffensiveAdaptation> getWeapons() {
-        return weapons;
-    }
 
     public void addDefenses(DefensiveAdaptation singleDefense) {
         defenses.add(singleDefense);
     }
 
-    public ArrayList<DefensiveAdaptation> getDefenses() {
-        return defenses;
-    }
 
     public void addMods(StandardMod singleMod) {
         mods.add(singleMod);
@@ -127,8 +133,6 @@ public class Organism {
         behaviors.add(singleBehavior);
     }
 
-    public ArrayList<Behaviors> getBehaviors() {
-        return behaviors;
-    }
+
 
 }
