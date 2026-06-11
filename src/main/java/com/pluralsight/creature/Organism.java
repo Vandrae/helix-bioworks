@@ -11,8 +11,8 @@ public class Organism {
     private final ArrayList<DefensiveAdaptation> defenses;
     private final ArrayList<StandardMod> mods;
     private final ArrayList<Behaviors> behaviors;
-    private Genome genome;
-    private Scale scale;
+    private final Genome genome;
+    private final Scale scale;
     boolean acceleratedGrowth;
 
     //methods
@@ -59,7 +59,7 @@ public class Organism {
                 " " + "\n" +
                 "Offensive Adaptations: " + "\n" +
                 formatList(weapons, false) + "\n" +
-                " " + "\n" +
+                "   " + "\n" +
                 "Defensive Adaptations: " + "\n" +
                 formatList(defenses, false) + "\n" +
                 " " + "\n" +
@@ -90,9 +90,9 @@ public class Organism {
     private String formatList(List<?> items, boolean brackets){
         String open;
         if (brackets){
-            open ="[\n ";
+            open ="[\n\t";
         }else{
-            open = " ";
+            open = "\t";
         }
 
         String close;
@@ -102,8 +102,8 @@ public class Organism {
             close = " ";
         }
 
-        return items.stream().map(item -> item.toString())
-                .collect(Collectors.joining(",\n  ", open, close));
+        return items.stream().map(Object::toString)
+                .collect(Collectors.joining(",\n\t", open, close));
     }
 
     //add to arraylist
